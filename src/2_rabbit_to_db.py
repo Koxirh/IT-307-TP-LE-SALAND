@@ -4,8 +4,15 @@ import json
 import os
 import time
 
-mongo_url = "mongodb://test:password@mongo:27017/?authMechanism=DEFAULT"
-client = MongoClient(mongo_url)
+MONGO_USERNAME = "test"
+MONGO_PASSWORD = "password"
+MONGO_HOST = "mongo"
+MONGO_PORT = 27017
+MONGO_DB = "tp-note"
+MONGO_COLLECTION = "movies"
+MONGO_URI = f"mongodb://{MONGO_USERNAME}:{MONGO_PASSWORD}@{MONGO_HOST}:{MONGO_PORT}"
+
+client = MongoClient(MONGO_URI)
 
 DB_NAME = "tp-note"
 COLLECTION_NAME = "movies"
